@@ -1,6 +1,4 @@
 "use client";
-import Link from "next/link";
-
 const Navbar = () => {
   return (
     <nav className="bg-gray-900 text-white py-4 px-6 shadow-md fixed w-full top-0 z-50">
