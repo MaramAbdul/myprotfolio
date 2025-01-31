@@ -7,7 +7,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">About Me</h3>
             <p className="text-sm">
-              I'm a passionate web developer who loves building modern,
+              I&apos;m a passionate web developer who loves building modern,
               responsive, and user-friendly web applications.
             </p>
           </div>
@@ -86,7 +86,6 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Info</h3>
             <ul className="space-y-2">
-              <li className="text-sm">Email: john.doe@example.com</li>
               <li className="text-sm">Phone: +1 234 567 890</li>
               <li className="text-sm">Location: New York, USA</li>
             </ul>

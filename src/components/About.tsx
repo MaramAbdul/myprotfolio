@@ -1,8 +1,10 @@
 "use client";
+
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image"; // ✅ Import Next.js Image
 
 const AboutSection = () => {
-  const aboutRef = useRef(null);
+  const aboutRef = useRef<HTMLDivElement | null>(null); // ✅ FIX: Explicitly define type
   const [typingIndex, setTypingIndex] = useState(0);
   const [typingFinished, setTypingFinished] = useState(false);
 
@@ -18,38 +20,35 @@ const AboutSection = () => {
     if (!aboutElement) return;
 
     const handleScroll = () => {
-      const rect = aboutElement.getBoundingClientRect();
+      if (!aboutRef.current) return;
+
+      const rect = aboutRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const sectionHeight = rect.height;
 
-      // Calculate scroll progress from 0 (top) to 1 (bottom)
       const scrollProgress = Math.min(
         1,
         Math.max(0, (windowHeight - rect.top) / (windowHeight + sectionHeight))
       );
 
-      const typingStart = 0.2; // Start typing at 20% visibility
-      const typingEnd = 0.5; // Finish typing at 50% visibility
-      const deleteStart = 0.2; // Start deleting at 20% when scrolling up
-      const deleteEnd = 0; // Finish deleting at the very top of the section
+      const typingStart = 0.2;
+      const typingEnd = 0.5;
+      const deleteStart = 0.2;
+      const deleteEnd = 0;
 
       if (scrollProgress >= typingStart && scrollProgress <= typingEnd) {
-        // Typing effect based on scroll
         const adjustedProgress =
           (scrollProgress - typingStart) / (typingEnd - typingStart);
         const targetCharacters = Math.floor(fullText.length * adjustedProgress);
-
         setTypingIndex(targetCharacters);
 
         if (targetCharacters >= fullText.length) {
           setTypingFinished(true);
         }
       } else if (scrollProgress <= deleteStart && scrollProgress >= deleteEnd) {
-        // Deleting effect when scrolling up
         const adjustedProgress =
           (scrollProgress - deleteEnd) / (deleteStart - deleteEnd);
         const targetCharacters = Math.floor(fullText.length * adjustedProgress);
-
         setTypingIndex(targetCharacters);
 
         if (targetCharacters <= 0) {
@@ -60,7 +59,7 @@ const AboutSection = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [fullText.length]); // ✅ Now includes `fullText.length` as a dependency
 
   // Split text dynamically
   const displayedText1 = fullText.slice(
@@ -93,9 +92,11 @@ const AboutSection = () => {
             )}
           </div>
           <div className="flex justify-center items-center">
-            <img
+            <Image
               src="/profile.jpg"
               alt="Profile"
+              width={256} // Adjust width
+              height={256} // Adjust height
               className="w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover border-4 border-accent"
             />
           </div>

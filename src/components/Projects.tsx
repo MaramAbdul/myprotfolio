@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ProjectsSection = () => {
   const projects = [
     {
@@ -29,10 +31,12 @@ const ProjectsSection = () => {
               key={index}
               className="p-6 bg-background rounded-lg shadow-lg animate-slide-in-left"
             >
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover aspect-video rounded-lg"
+                width={400} // Adjust width
+                height={300} // Adjust height
+                className="w-full h-48 object-cover rounded-lg"
               />
               <h3 className="mt-4 text-2xl font-bold text-text">
                 {project.title}

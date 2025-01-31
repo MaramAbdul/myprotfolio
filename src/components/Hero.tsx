@@ -15,6 +15,7 @@ const HomeSection = () => {
         >
           Welcome to My Portfolio
         </motion.h1>
+        
         <p className="mt-4 text-lg sm:text-xl md:text-2xl text-background">
           I build amazing things with Next.js and Tailwind CSS!
         </p>
@@ -23,7 +24,7 @@ const HomeSection = () => {
             onClick={() =>
               document
                 .getElementById("projects")
-                .scrollIntoView({ behavior: "smooth" })
+                ?.scrollIntoView({ behavior: "smooth" })
             }
             className="px-6 py-3 bg-accent text-text rounded-lg hover:bg-secondary transition duration-300"
           >
