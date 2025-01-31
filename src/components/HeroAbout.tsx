@@ -110,7 +110,7 @@ const HeroAboutSection = () => {
         {/* Profile Image */}
         <div className="md:w-1/2 flex justify-center">
           <Image
-            src="/profile.jpg"
+            src="/profile.PNG"
             alt="Maram Abdulrazzaq"
             width={256}
             height={256}

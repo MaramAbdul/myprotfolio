@@ -47,7 +47,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-accent"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-accent p-4"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-background text-center">
