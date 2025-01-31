@@ -84,7 +84,7 @@ const HeroAboutSection = () => {
             Hi, I..m Maram Abdulrazzaq
           </h1>
           <p className="mt-4 text-lg sm:text-xl md:text-2xl text-background">
-            Software Engineer | Full Stack Developer | Cloud Enthusiast
+            Software Engineer | Full Stack Developer 
           </p>
 
           {/* Typing Animation Section */}
