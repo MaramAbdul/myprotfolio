@@ -5,24 +5,30 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 export default function Home() {
   return (
-    <div className="bg-gray-900 text-white">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white text-textColor min-h-screen"
+    >
       <Navbar />
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="about">
+      <Hero />
+      <AnimatedSection id="about">
         <About />
-      </section>
-      <section id="projects">
+      </AnimatedSection>
+      <AnimatedSection id="projects">
         <Projects />
-      </section>
-      <section id="contact">
+      </AnimatedSection>
+      <AnimatedSection id="contact">
         <Contact />
-      </section>
+      </AnimatedSection>
       <Footer />
-    </div>
+    </motion.div>
   );
 }

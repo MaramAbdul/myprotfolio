@@ -18,3 +18,16 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Blinking cursor effect */
+.animate-blink {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}

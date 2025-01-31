@@ -1,25 +1,49 @@
-const Projects = () => {
+const ProjectsSection = () => {
+  const projects = [
+    {
+      title: "Project 1",
+      description:
+        "A modern e-commerce platform built with Next.js and Tailwind CSS.",
+      image: "/project1.jpg", // Replace with your project image
+    },
+    {
+      title: "Project 2",
+      description:
+        "A portfolio website showcasing creative designs and animations.",
+      image: "/project2.jpg", // Replace with your project image
+    },
+  ];
+
   return (
-    <div className="py-20 px-6 text-center bg-gray-900 text-white">
-      <h2 className="text-4xl font-bold">Projects</h2>
-      <p className="mt-4 max-w-2xl mx-auto">
-        Here are some of the projects I have worked on:
-      </p>
-      <div className="mt-8 flex flex-wrap justify-center gap-6">
-        <div className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-sm">
-          <h3 className="text-xl font-semibold">Project One</h3>
-          <p className="mt-2">
-            A web app that allows users to track their daily tasks.
-          </p>
-        </div>
-        <div className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-sm">
-          <h3 className="text-xl font-semibold">Project Two</h3>
-          <p className="mt-2">
-            An e-commerce site with an intuitive UI for online shopping.
-          </p>
+    <section
+      id="projects"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-accent"
+    >
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-background text-center">
+          My Projects
+        </h2>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="p-6 bg-background rounded-lg shadow-lg animate-slide-in-left"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover aspect-video rounded-lg"
+              />
+              <h3 className="mt-4 text-2xl font-bold text-text">
+                {project.title}
+              </h3>
+              <p className="mt-2 text-text">{project.description}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-export default Projects;
+
+export default ProjectsSection;

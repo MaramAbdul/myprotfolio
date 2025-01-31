@@ -8,11 +8,21 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+   colors: {
+        // Semantic color names
+        primary: '#2E86AB',    // Blue (Main brand color)
+        secondary: '#FF6B6B',  // Coral (Secondary brand color)
+        accent: '#FFE66D',     // Yellow (Accent color)
+        background: '#F7FFF7', // Off-White (Background color)
+        text: '#1A535C',       // Dark Teal (Text color)
+        highlight: '#4ECDC4',  // Turquoise (Highlight color)
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        display: ["Poppins", "sans-serif"]
       },
     },
   },
   plugins: [],
 } satisfies Config;
+
