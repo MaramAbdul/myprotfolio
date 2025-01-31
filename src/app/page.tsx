@@ -1,13 +1,13 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
+
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import HeroAboutSection from "@/components/HeroAbout";
 
 export default function Home() {
   return (
@@ -19,10 +19,11 @@ export default function Home() {
       className="bg-white text-textColor min-h-screen"
     >
       <Navbar />
-      <Hero />
+      {/* <Hero />
       <AnimatedSection id="about">
         <About />
-      </AnimatedSection>
+      </AnimatedSection> */}
+      <HeroAboutSection />
       <AnimatedSection id="projects">
         <Projects />
       </AnimatedSection>
