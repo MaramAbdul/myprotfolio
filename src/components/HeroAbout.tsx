@@ -7,7 +7,17 @@ const HeroAboutSection = () => {
   const [typingIndex, setTypingIndex] = useState(0);
   const [typingFinished, setTypingFinished] = useState(false);
   const [isTypingStarted, setIsTypingStarted] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint (1024px)
+    };
+
+    checkScreenSize(); // Check screen size on load
+    window.addEventListener("resize", checkScreenSize); // Listen for screen resize
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
   const fullText1 = `I&apos;m a highly motivated software engineer passionate about solving complex problems through technology.`;
   const fullText2 =
     "I specialize in full-stack development with expertise in frontend (Vue.js, Angular, React), backend (PHP, Python, Go, Java, .NET), and cloud infrastructure (AWS, Azure, Docker).";
@@ -111,8 +121,8 @@ const HeroAboutSection = () => {
         {/* Profile Image */}
         <div className="md:w-1/2 flex justify-center">
           <div
-            className="w-80 h-80 rounded-full overflow-hidden border-4 border-accent flex items-center justify-center"
-            style={{ height: "400px" }}
+            className="w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent flex items-center justify-center"
+            style={isLargeScreen ? { height: "400px" } : {}} // Apply only on large screens
           >
             <Image
               src="/profile.jpg"
