@@ -81,7 +81,7 @@ const HeroAboutSection = () => {
         {/* Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-background">
-            Hi, I&apos;m Maram Abdulrazzaq
+            Hi, I..m Maram Abdulrazzaq
           </h1>
           <p className="mt-4 text-lg sm:text-xl md:text-2xl text-background">
             Software Engineer | Full Stack Developer | Cloud Enthusiast
