@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import HeroAboutSection from "@/components/HeroAbout";
+import SkillsSection from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <About />
       </AnimatedSection> */}
       <HeroAboutSection />
+      <SkillsSection />
       <AnimatedSection id="projects">
         <Projects />
       </AnimatedSection>
