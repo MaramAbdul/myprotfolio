@@ -86,8 +86,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Info</h3>
             <ul className="space-y-2">
-              <li className="text-sm">Phone: +1 234 567 890</li>
-              <li className="text-sm">Location: New York, USA</li>
+              <li className="text-sm">Phone: +973 3608 8772</li>
+              <li className="text-sm">Location: Bahrain- Manama</li>
             </ul>
           </div>
         </div>

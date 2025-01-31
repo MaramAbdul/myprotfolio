@@ -60,7 +60,7 @@ const HeroAboutSection = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isTypingStarted, fullText.length]); // ✅ Added `fullText.length` to dependency array
+  }, [isTypingStarted, fullText.length]);
 
   const displayedText1 = fullText.slice(
     0,
@@ -110,13 +110,18 @@ const HeroAboutSection = () => {
 
         {/* Profile Image */}
         <div className="md:w-1/2 flex justify-center">
-          <Image
-            src="/profile.PNG"
-            alt="Maram Abdulrazzaq"
-            width={256}
-            height={256}
-            className="w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover border-4 border-accent"
-          />
+          <div
+            className="w-80 h-80 rounded-full overflow-hidden border-4 border-accent flex items-center justify-center"
+            style={{ height: "400px" }}
+          >
+            <Image
+              src="/profile.jpg"
+              alt="Maram Abdulrazzaq"
+              width={310}
+              height={320}
+              className="rounded-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
