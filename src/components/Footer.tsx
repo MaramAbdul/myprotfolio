@@ -95,7 +95,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="mt-8 border-t border-background/20 pt-8 text-center">
           <p className="text-sm">
-            &copy; {new Date().getFullYear()} John Doe. All rights reserved.
+            &copy; {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
       </div>
