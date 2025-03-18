@@ -86,7 +86,7 @@ const HeroAboutSection = () => {
     <section
       id="home"
       ref={aboutRef}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary/70 to-secondary"
     >
       <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-8">
         {/* Text Section */}
@@ -125,7 +125,7 @@ const HeroAboutSection = () => {
             style={isLargeScreen ? { height: "400px" } : {}} // Apply only on large screens
           >
             <Image
-              src="/profile.jpg"
+              src="/IMG_4531 3.jpg"
               alt="Maram Abdulrazzaq"
               width={310}
               height={320}

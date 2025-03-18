@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-primary/90 backdrop-blur-md z-50">
+    <nav className="fixed top-0 w-full bg-primary backdrop-blur-md z-50">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-xl font-bold text-background">My Portfolio</div>
         {/* Hamburger Menu for Mobile */}
