@@ -125,7 +125,7 @@ const HeroAboutSection = () => {
             style={isLargeScreen ? { height: "400px" } : {}} // Apply only on large screens
           >
             <Image
-              src="/profile.png"
+              src="/profile.PNG"
               alt="Maram Abdulrazzaq"
               width={310}
               height={320}
